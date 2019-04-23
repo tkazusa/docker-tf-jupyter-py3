@@ -1,9 +1,8 @@
-FROM tensorflow/tensorflow:latest-gpu-py3
+FROM tensorflow/tensorflow:latest-py3
 ENV DEBIAN_FRONTEND noninteractive
-
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN apt-get update && apt-get install -y \
-    emacs \
     git \
     vim \
     wget \
@@ -12,7 +11,9 @@ RUN apt-get update && apt-get install -y \
     
 RUN pip3 install \
     keras \
-    
-VOLUME ["/home"]
-EXPOSE 22
-CMD 
+    jupyter \
+    jupyterlab 
+
+EXPOSE 8888
+
+CMD ["/bin/bash"]
