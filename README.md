@@ -23,7 +23,7 @@ docker build -t tf-jupyter-py3 .
 docker run -it -p 8888:8888 tkazusa/tf-jupyter-py3
 ```
 
-## Run jupyter lab
+## Running jupyter lab
 ```
 jupyter lab --ip 0.0.0.0 --allow-root
 ```
