@@ -4,6 +4,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN apt-get update && apt-get install -y \
     git \
+    tmux \
     vim \
     wget \
     && apt-get clean \
